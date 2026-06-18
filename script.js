@@ -1,17 +1,17 @@
-// ความภาคภูมิใจของ Phachara 
- 
+// ความภาคภูมิใจของ Phachara
+
 document.addEventListener("DOMContentLoaded", () => {
   const prefersReducedMotion = window.matchMedia(
     "(prefers-reduced-motion: reduce)"
   ).matches;
- 
+
   const revealEls = document.querySelectorAll(".reveal");
- 
+
   if (prefersReducedMotion || !("IntersectionObserver" in window)) {
     revealEls.forEach((el) => el.classList.add("is-visible"));
     return;
   }
- 
+
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -23,7 +23,6 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     { threshold: 0.15 }
   );
- 
+
   revealEls.forEach((el) => observer.observe(el));
 });
- 
