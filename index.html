@@ -5,52 +5,111 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="เว็บไซต์แสดงผลงานและทักษะของ Phatchara">
     <title>ความภาคภูมิใจของ Phatchara</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600;700&family=Sarabun:wght@300;400;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>สวัสดี! ผมคือ Phatchara</h1>
-        <p>นี่คือผลงานและความภาคภูมิใจของผม</p>
+    <header class="site-header">
+        <nav class="nav">
+            <a href="#top" class="logo">PHATCHARA</a>
+            <ul class="nav-links">
+                <li><a href="#about">เกี่ยวกับผม</a></li>
+                <li><a href="#projects">ผลงาน</a></li>
+                <li><a href="#skills">ทักษะ</a></li>
+                <li><a href="#contact">ติดต่อ</a></li>
+            </ul>
+        </nav>
+
+        <div class="hero" id="top">
+            <div class="hero-text">
+                <p class="eyebrow">// นักพัฒนาซอฟต์แวร์</p>
+                <h1>สวัสดี! ผมคือ <span class="accent">Phatchara</span></h1>
+                <p class="lead">นี่คือผลงานและความภาคภูมิใจของผม</p>
+                <a href="#projects" class="cta">ดูผลงานของผม</a>
+            </div>
+            <div class="photo-frame hero-photo" data-placeholder="ใส่รูปโปรไฟล์ที่ images/profile.jpg">
+                <img src="images/profile.jpg" alt="รูปโปรไฟล์ของ Phatchara"
+                     onerror="this.closest('.photo-frame').classList.add('is-empty')">
+            </div>
+        </div>
+
+        <div class="ticker" aria-hidden="true">
+            <div class="ticker-track">
+                <span class="up">▲ เขียนโค้ดทุกวัน</span>
+                <span class="up">▲ เล่นหุ้นเป็นงานอดิเรก</span>
+                <span class="down">▼ ความเครียดวันจันทร์</span>
+                <span class="up">▲ ตกปลาวันหยุด</span>
+                <span class="up">▲ แข่งรถสายความเร็ว</span>
+                <span class="up">▲ เรียนรู้สิ่งใหม่เสมอ</span>
+                <span class="up">▲ เขียนโค้ดทุกวัน</span>
+                <span class="up">▲ เล่นหุ้นเป็นงานอดิเรก</span>
+                <span class="down">▼ ความเครียดวันจันทร์</span>
+                <span class="up">▲ ตกปลาวันหยุด</span>
+                <span class="up">▲ แข่งรถสายความเร็ว</span>
+                <span class="up">▲ เรียนรู้สิ่งใหม่เสมอ</span>
+            </div>
+        </div>
     </header>
 
-    <section id="about">
-        <h2>เกี่ยวกับผม</h2>
-        <p>ผมเป็นนักพัฒนาซอฟต์แวร์ที่มีความหลงใหลในการสร้างสรรค์สิ่งใหม่ ๆ ผมภูมิใจในผลงานและทักษะที่ผมพัฒนามาอย่างต่อเนื่อง</p>
-    </section>
+    <main>
+        <section id="about" class="reveal">
+            <p class="eyebrow">// เกี่ยวกับผม</p>
+            <h2>เกี่ยวกับผม</h2>
+            <div class="about-grid">
+                <div class="photo-frame about-photo" data-placeholder="ใส่รูปที่ images/about.jpg">
+                    <img src="images/about.jpg" alt="Phatchara กำลังทำงาน"
+                         onerror="this.closest('.photo-frame').classList.add('is-empty')">
+                </div>
+                <p class="about-text">
+                    ผมเป็นนักพัฒนาซอฟต์แวร์ที่มีความหลงใหลในการสร้างสรรค์สิ่งใหม่ ๆ
+                    ผมภูมิใจในผลงานและทักษะที่ผมพัฒนามาอย่างต่อเนื่อง
+                </p>
+            </div>
+        </section>
 
-    <section id="projects">
-        <h2>ผลงานของผม</h2>
+        <section id="projects" class="reveal">
+            <p class="eyebrow">// ผลงาน</p>
+            <h2>ผลงานของผม</h2>
+            <div class="project-grid">
+                <article class="project">
+                    <div class="photo-frame project-photo" data-placeholder="ใส่รูปที่ images/project-portfolio.jpg">
+                        <img src="images/project-portfolio.jpg" alt="ภาพตัวอย่างเว็บไซต์ Portfolio"
+                             onerror="this.closest('.photo-frame').classList.add('is-empty')">
+                    </div>
+                    <h3>เว็บไซต์ Portfolio</h3>
+                    <p>เว็บไซต์นี้เป็นหนึ่งในผลงานที่ผมสร้างขึ้นเพื่อแสดงความสามารถของผม</p>
+                </article>
+                <article class="project">
+                    <div class="photo-frame project-photo" data-placeholder="ใส่รูปที่ images/project-taskapp.jpg">
+                        <img src="images/project-taskapp.jpg" alt="ภาพตัวอย่างแอปพลิเคชันจัดการงาน"
+                             onerror="this.closest('.photo-frame').classList.add('is-empty')">
+                    </div>
+                    <h3>แอปพลิเคชันจัดการงาน</h3>
+                    <p>แอปพลิเคชันที่ช่วยให้ผู้ใช้งานจัดการงานได้อย่างมีประสิทธิภาพ</p>
+                </article>
+            </div>
+        </section>
 
-        <div class="project">
-            <h3>เว็บไซต์ Portfolio</h3>
-            <p>เว็บไซต์นี้เป็นหนึ่งในผลงานที่ผมสร้างขึ้นเพื่อแสดงความสามารถของผม</p>
-        </div>
+        <section id="skills" class="reveal">
+            <p class="eyebrow">// ทักษะ</p>
+            <h2>ทักษะของผม</h2>
+            <ul class="skills-list">
+                <li><span class="skill-icon" aria-hidden="true">📈</span>เล่นหุ้น</li>
+                <li><span class="skill-icon" aria-hidden="true">🎣</span>ตกปลา</li>
+                <li><span class="skill-icon" aria-hidden="true">🏁</span>แข่งรถ</li>
+            </ul>
+        </section>
+    </main>
 
-        <div class="project">
-            <h3>แอปพลิเคชันจัดการงาน</h3>
-            <p>แอปพลิเคชันที่ช่วยให้ผู้ใช้งานจัดการงานได้อย่างมีประสิทธิภาพ</p>
-        </div>
-    </section>
-
-    <section id="skills">
-        <h2>ทักษะของผม</h2>
-        <ul>
-            <li>เล่นหุ้น</li>
-            <li>ตกปลา</li>
-            <li>แข่งรถ</li>
-        </ul>
-    </section>
-
-    <footer>
-        <p>
-            ติดต่อผมได้ที่:0994230316
-
-        </p>
-
+    <footer id="contact">
+        <p class="eyebrow">// ติดต่อ</p>
+        <p>ติดต่อผมได้ที่</p>
+        <a class="phone" href="tel:0994230316">099-423-0316</a>
     </footer>
 
     <script src="script.js"></script>
-
 </body>
 </html>
